@@ -27,6 +27,7 @@ model Product {
   imageUrl String
   category Category @relation(fields: [categoryId], references: [id])
   discountPercentage Int @default(0)
+
   categoryId String // Adicione este campo
 }
 
