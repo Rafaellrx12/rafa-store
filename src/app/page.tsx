@@ -1,7 +1,11 @@
-import Image from 'next/image'
+"use client"
+import { useSession } from 'next-auth/react';
+
 
 export default function Home() {
+
+  const {data} = useSession();
   return (
-    <div>teste</div>
+    <div>{data?.user?.name}</div>
   )
 }
