@@ -22,7 +22,6 @@ import { Avatar, AvatarImage } from "./avatar";
 import { AvatarFallback } from "@radix-ui/react-avatar";
 import { Separator } from "./separator";
 import Link from "next/link";
-
 const Header = () => {
   const { status, data } = useSession();
   const handleLoginClick = async () => {
@@ -89,7 +88,6 @@ const Header = () => {
               <PercentIcon size={16} />
               Ofertas
             </Button>
-
             <SheetClose asChild>
               <Link href="/catalog">
                 <Button
@@ -104,9 +102,13 @@ const Header = () => {
           </div>
         </SheetContent>
       </Sheet>
-      <h1 className="text-lg font-semibold">
-        <span className="text-primary">FSW</span> Store
-      </h1>
+
+      <Link href="/">
+        <h1 className="text-lg font-semibold">
+          <span className="text-primary">FSW</span> Store
+        </h1>
+      </Link>
+
       <Button size="icon" variant="outline">
         <ShoppingCartIcon />
       </Button>
