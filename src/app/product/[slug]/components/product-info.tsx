@@ -85,7 +85,7 @@ const ProductInfo = ({
 
           <div className="flex flex-col">
             <p className="text-xs">
-              Entrega via <span className="font-bold">FSPacket®</span>
+              Entrega via <span className="font-bold">RafaExpress®</span>
             </p>
             <p className="text-xs text-[#8162FF]">
               Envio para <span className="font-bold">todo Brasil</span>
