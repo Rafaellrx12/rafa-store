@@ -3,7 +3,6 @@ import ProductItem from "@/components/ui/product-item";
 import { CATEGORY_ICON } from "@/constants/category-icon";
 import { computeProductTotalPrice } from "@/helpers/product";
 import { prismaClient } from "@/lib/prisma";
-import { ShapesIcon } from "lucide-react";
 
 const CategoryProducts = async ({ params }: any) => {
   const category = await prismaClient.category.findFirst({
@@ -14,11 +13,9 @@ const CategoryProducts = async ({ params }: any) => {
       products: true,
     },
   });
-
   if (!category) {
     return null;
   }
-
   return (
     <div className="flex flex-col gap-8 p-5">
       <Badge
@@ -28,7 +25,6 @@ const CategoryProducts = async ({ params }: any) => {
         {CATEGORY_ICON[params.slug as keyof typeof CATEGORY_ICON]}
         {category.name}
       </Badge>
-
       <div className="grid grid-cols-2 gap-8">
         {category.products.map((product) => (
           <ProductItem
@@ -40,5 +36,4 @@ const CategoryProducts = async ({ params }: any) => {
     </div>
   );
 };
-
 export default CategoryProducts;
