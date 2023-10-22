@@ -1,12 +1,13 @@
 {
-  "name": "fsw-store",
+  "name": "rafa-store",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "prisma generate"
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
